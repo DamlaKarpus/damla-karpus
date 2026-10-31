@@ -1,39 +1,9 @@
 @import "tailwindcss";
 
-/* ===========================
-   Theme
-=========================== */
+/* Global Styles */
 
 :root {
-  --background: #050505;
-  --surface: #101010;
-  --surface-2: #18181b;
-  --border: rgba(255, 255, 255, 0.08);
-
-  --text: #fafafa;
-  --text-muted: #a1a1aa;
-
-  --primary: #8b5cf6;
-  --primary-hover: #a855f7;
-
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--text);
-
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-mono);
-}
-
-/* ===========================
-   Base
-=========================== */
-
-* {
-  box-sizing: border-box;
+  color-scheme: dark;
 }
 
 html {
@@ -41,60 +11,25 @@ html {
 }
 
 body {
-  background: var(--background);
-  color: var(--text);
-  font-family: var(--font-sans), sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background: #050816;
+  color: white;
   overflow-x: hidden;
 }
 
-/* ===========================
-   Selection
-=========================== */
-
-::selection {
-  background: #8b5cf6;
-  color: white;
-}
-
-/* ===========================
-   Scrollbar
-=========================== */
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #0b0b0b;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #2a2a2a;
-  border-radius: 999px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #8b5cf6;
-}
-
-/* ===========================
-   Utilities
-=========================== */
+/* Glassmorphism */
 
 .glass {
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(18px);
+  background: rgba(17, 17, 24, 0.55);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
   border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.35),
+    inset 0 1px rgba(255, 255, 255, 0.04);
 }
 
-.section {
-  max-width: 1200px;
-  margin: auto;
-  padding: 120px 24px;
-}
-
-.gradient-text {
-  background: linear-gradient(90deg, #ffffff, #8b5cf6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+* {
+  box-sizing: border-box;
 }
